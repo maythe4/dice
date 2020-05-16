@@ -1,3 +1,7 @@
+* time zone
+* round buttons
+* save to local store
+
 mkdir maythe4
 
 cd maythe4
