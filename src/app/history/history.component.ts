@@ -31,7 +31,21 @@ export class HistoryComponent implements OnInit {
   }
 
   formatHistoryEntry(historyEntry: HistoryEntry): string {
-    const formatedDate = historyEntry.date.toISOString().slice(0, 19).replace("T", " ");
+    const d = historyEntry.date;
+    const year = d.getFullYear();
+    const month = d.getMonth() + 1;
+    const day = d.getDate();
+    const hour = d.getHours();
+    const minute = d.getMinutes();
+    const second = d.getSeconds();
+
+    let formatedDate = '' + year;
+    formatedDate += '-' + ('0' + month).substr(-2);
+    formatedDate += '-' + ('0' + day).substr(-2);
+    formatedDate += ' ' + ('0' + hour).substr(-2);
+    formatedDate += ':' + ('0' + minute).substr(-2);
+    formatedDate += ':' + ('0' + second).substr(-2);
+    
     const diceValues = historyEntry.dices.map(dice => dice.value).join(', ');
     const output = formatedDate + ": " + diceValues;
     return output;

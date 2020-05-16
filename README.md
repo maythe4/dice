@@ -1,5 +1,4 @@
-## Todo
-* time zone
+## Todos
 * round buttons
 * save to local store
 
