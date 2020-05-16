@@ -1,6 +1,9 @@
+## Todo
 * time zone
 * round buttons
 * save to local store
+
+## Install
 
 mkdir maythe4
 
