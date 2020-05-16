@@ -73,4 +73,5 @@ h2 {
 
 .pure-button {
     touch-action: manipulation;
+    border-radius: 4px;
 }

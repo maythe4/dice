@@ -1,5 +1,4 @@
 ## Todos
-* round buttons
 * save to local store
 
 ## Install
