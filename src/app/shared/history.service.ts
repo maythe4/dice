@@ -28,6 +28,11 @@ export class HistoryService {
   getHistory(): HistoryEntry[] {
     return this.history;
   }
+
+  loadHistory(history: HistoryEntry[]) {
+    this.history = history;
+    this.updatedSource.next();
+  }
   
   private insertHistoryEntry(dices: Dice[]) {
     if (dices.length > 0)

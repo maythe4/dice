@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
+import { DataDice } from './storage.service';
 
 export interface TranslationEntry {
   source: string;
@@ -23,6 +24,13 @@ export class SettingsService {
       this.numberOfSides = 6;
       this.language = 'de';
       this.germanTranslations = this.getGermanTranslations();
+  }
+
+  loadSettings(data: DataDice) {
+    this.numberOfDices = data.numberOfDices;
+    this.numberOfSides = data.numberOfSides;
+    this.language = data.language;
+    this.updatedSource.next();
   }
 
   // number of dices

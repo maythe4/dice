@@ -31,7 +31,11 @@ export class HistoryComponent implements OnInit {
   }
 
   formatHistoryEntry(historyEntry: HistoryEntry): string {
-    const d = historyEntry.date;
+    const d = new Date(historyEntry.date);
+    if (d === undefined || d === null) {
+      return '';
+    }
+
     const year = d.getFullYear();
     const month = d.getMonth() + 1;
     const day = d.getDate();
