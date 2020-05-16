@@ -1,0 +1,53 @@
+<div class="framed">
+    <h2>{{ translate('Settings') }}</h2>
+    <ul class="list">
+        <li>
+            <a class="pure-button"
+                [ngClass]="{ 'pure-button-primary': canDecreaseNumberOfDices(),
+                             'pure-button-disabled': !canDecreaseNumberOfDices() }"
+                (click)="decreaseNumberOfDices()">
+                    -
+            </a>
+            {{ getNumberOfDices() }}
+            <a class="pure-button"
+                [ngClass]="{ 'pure-button-primary': canIncreaseNumberOfDices(),
+                             'pure-button-disabled': !canIncreaseNumberOfDices() }"
+                (click)="increaseNumberOfDices()">
+                    +
+            </a>
+            {{ translate('dices') }}
+        </li>
+        <li>
+            {{ translate('with') }}
+            <a class="pure-button"
+                [ngClass]="{ 'pure-button-primary': canDecreaseNumberOfSides(),
+                             'pure-button-disabled': !canDecreaseNumberOfSides() }"
+                (click)="decreaseNumberOfSides()">
+                    -
+            </a>
+            {{ getNumberOfSides() }}
+            <a class="pure-button"
+                [ngClass]="{ 'pure-button-primary': canIncreaseNumberOfSides(),
+                             'pure-button-disabled': !canIncreaseNumberOfSides() }"
+                (click)="increaseNumberOfSides()">
+                    +
+            </a>
+            {{ translate('sides') }}
+        </li>
+        <li>
+            <a class="pure-button"
+                [ngClass]="{ 'pure-button-primary': !isGerman(),
+                             'pure-button-disabled': isGerman() }"
+                (click)="speakGerman()">
+                    DE
+            </a>
+
+            <a class="pure-button"
+                [ngClass]="{ 'pure-button-primary': !isEnglish(),
+                             'pure-button-disabled': isEnglish() }"
+                (click)="speakEnglish()">
+                    EN
+            </a>
+        </li>
+      </ul>
+</div>

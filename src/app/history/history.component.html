@@ -1,0 +1,29 @@
+<div class="framed">
+    <h2>{{ translate('History') }}</h2>
+    <ul class="list">
+        <li *ngFor="let historyEntry of historyToShow">{{ formatHistoryEntry(historyEntry) }}</li>
+    </ul>
+
+    <div class="history-buttons-container">
+        <a class="pure-button history-button"
+            [ngClass]="{ 'pure-button-primary': canShowLess(),
+                         'pure-button-disabled': !canShowLess() }"
+            (click)="showLess()">
+                {{ translate('less') }}
+        </a>
+        <div class="history-buttons-group">
+            <a class="pure-button history-button"
+                [ngClass]="{ 'pure-button-primary': canShowAll(),
+                            'pure-button-disabled': !canShowAll() }"
+                (click)="showAll()">
+                {{ translate('all') }}
+            </a>
+            <a class="pure-button history-button"
+                [ngClass]="{ 'pure-button-primary': canShowMore(),
+                            'pure-button-disabled': !canShowMore() }"
+                (click)="showMore()">
+                    {{ translate('more') }}
+            </a>
+        </div>
+    </div>
+</div>

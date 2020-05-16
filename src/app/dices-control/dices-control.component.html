@@ -1,0 +1,12 @@
+<app-dices-container *ngIf="showDices(); else spacer"
+    [dices]="dices"></app-dices-container>
+
+<ng-template #spacer>
+    <div class="margin-top"></div>
+</ng-template>
+
+<div class="centered-container">
+    <a class="pure-button pure-button-primary" (click)="roll()">
+        {{ translate('roll') }}
+    </a>
+</div>

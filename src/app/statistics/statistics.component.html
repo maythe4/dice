@@ -1,0 +1,6 @@
+<div class="framed">
+    <h2>{{ translate('Statistics') }}</h2>
+    <ul class="list">
+        <li *ngFor="let statisticsEntry of statisticsEntries">{{ formatStatisticsEntry(statisticsEntry) }}</li>
+    </ul>
+</div>
