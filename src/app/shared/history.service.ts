@@ -29,9 +29,14 @@ export class HistoryService {
     return this.history;
   }
 
-  loadHistory(history: HistoryEntry[]) {
+  setHistory(history: HistoryEntry[]) {
     this.history = history;
     this.updatedSource.next();
+  }
+
+  deleteHistory() {
+    this.diceService.setDices([]);
+    this.setHistory([]);
   }
   
   private insertHistoryEntry(dices: Dice[]) {

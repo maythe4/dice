@@ -19,13 +19,17 @@ export class DiceService {
     this.dices = [];
 
     this.settingsService.updated$.subscribe(() => {
-      this.dices = [];
-      this.updatedSource.next();
+      this.setDices([]);
     });
   }
 
   getDices(): Dice[] {
     return this.dices;
+  }
+
+  setDices(dices: Dice[]) {
+    this.dices = dices;
+    this.updatedSource.next();
   }
 
   roll() {

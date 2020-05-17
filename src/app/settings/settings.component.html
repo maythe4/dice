@@ -35,6 +35,14 @@
             {{ translate('sides') }}
         </li>
         <li>
+            <a class="pure-button" 
+                [ngClass]="{ 'pure-button-primary': hasHistory(),
+                             'pure-button-disabled': !hasHistory() }"
+                (click)="deleteHistory()">
+                    {{ translate('Delete history') }}
+            </a>
+        </li>
+        <li>
             <a class="pure-button"
                 [ngClass]="{ 'pure-button-primary': !isGerman(),
                              'pure-button-disabled': isGerman() }"

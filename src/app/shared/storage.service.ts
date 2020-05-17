@@ -39,7 +39,7 @@ export class StorageService {
       const currentHistoryString = JSON.stringify(this.historyService.getHistory());
       if (dataHistoryString !== currentHistoryString)
       {
-        this.historyService.loadHistory(data.history);
+        this.historyService.setHistory(data.history);
       }
     }
   }

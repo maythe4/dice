@@ -123,6 +123,7 @@ export class SettingsService {
   private getGermanTranslations(): TranslationEntry[] {
     let translations: TranslationEntry[] = [];
     translations.push({ source: 'all', translation: 'alle' });
+    translations.push({ source: 'Delete history', translation: 'Historie löschen' });
     translations.push({ source: 'dices', translation: 'Würfeln' });
     translations.push({ source: 'History', translation: 'Historie' });
     translations.push({ source: 'less', translation: 'weniger' });

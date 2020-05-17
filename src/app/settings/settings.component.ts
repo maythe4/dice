@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SettingsService } from '../shared/settings.service';
+import { HistoryService } from '../shared/history.service';
 
 @Component({
   selector: 'app-settings',
@@ -8,7 +9,10 @@ import { SettingsService } from '../shared/settings.service';
 })
 export class SettingsComponent implements OnInit {
 
-  constructor(private settingsService: SettingsService) { }
+  constructor(
+    private settingsService: SettingsService,
+    private historyService: HistoryService
+  ) { }
 
   ngOnInit(): void {
   }
@@ -55,6 +59,16 @@ export class SettingsComponent implements OnInit {
 
   increaseNumberOfSides() {
     this.settingsService.increaseNumberOfSides();
+  }
+
+  // history
+
+  hasHistory() {
+    return this.historyService.getHistory().length > 0;
+  }
+
+  deleteHistory() {
+    return this.historyService.deleteHistory();
   }
 
   // language
