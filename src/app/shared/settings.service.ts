@@ -132,8 +132,9 @@ export class SettingsService {
     translations.push({ source: 'Settings', translation: 'Einstellungen' });
     translations.push({ source: 'sides', translation: 'Seiten' });
     translations.push({ source: 'Statistics', translation: 'Statistik' });
+    translations.push({ source: 'This program runs only in your browser. No data is transfered to any server.', translation: 'Diese Anwendung wird nur in Ihrem Browser ausgeführt. Keine Daten werden zu irgendeinem Server übertragen.' });
     translations.push({ source: 'with', translation: 'mit' });
-
+    
     return translations;
   }
 

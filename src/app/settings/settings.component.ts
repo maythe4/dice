@@ -8,6 +8,7 @@ import { HistoryService } from '../shared/history.service';
   styleUrls: ['./settings.component.css']
 })
 export class SettingsComponent implements OnInit {
+  public showInfo: boolean;
 
   constructor(
     private settingsService: SettingsService,
@@ -15,6 +16,7 @@ export class SettingsComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    this.showInfo = false;
   }
 
   // dices
@@ -91,6 +93,12 @@ export class SettingsComponent implements OnInit {
 
   translate(input: string) {
     return this.settingsService.translate(input);
+  }
+
+  // info
+
+  toggleInfo() {
+    this.showInfo = !this.showInfo;
   }
 
 }

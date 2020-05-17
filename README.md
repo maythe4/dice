@@ -1,6 +1,3 @@
-## Todos
-* save to local store
-
 ## Install
 
 mkdir maythe4

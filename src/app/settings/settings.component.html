@@ -57,5 +57,13 @@
                     EN
             </a>
         </li>
+        <li>
+            <a class="pure-button pure-button-primary" (click)="toggleInfo()">
+                {{ translate('Info') }}
+            </a>
+            <div class="info" *ngIf="showInfo">
+                {{ translate('This program runs only in your browser. No data is transfered to any server.') }}
+            </div>
+        </li>
       </ul>
 </div>
